@@ -55,6 +55,12 @@ a:focus{
 .modal-body img {
     width: 100%;
 }
+
+.top_heder_agile_info{
+	box-shadow: 2px 0 5px #ababab;
+	position: relative;
+	z-index: 9
+}
 /*-- banner --*/
 .banner {
     margin: 0 auto;
@@ -170,7 +176,7 @@ a:focus{
 .banner_wthree_agile_info {
     position: relative;
     text-align: left;
-    margin: 12% auto 0;
+    margin: 7% auto 0;
     width: 75%;
     padding: 0 0 0 0em;
 }
@@ -330,7 +336,7 @@ nav.navbar.navbar-default {
     margin-left: 1em;
     font-weight: 600;
     border-radius: 0;
-    padding: 13px 0 12px 0;
+    padding: 0px 0px;
 }
 .navbar-brand span {
     padding: 0;
@@ -350,7 +356,7 @@ nav.navbar.navbar-default {
     border-radius: 0px;
 }
 .navbar-nav {
-      margin: 1.8em 0 0 6em;
+      margin: 2.8em 0 0 9em;
 }
 .agile_short_dropdown {
     border-radius: 0;
@@ -451,7 +457,7 @@ nav.navbar.navbar-default {
 /*-- //Juliet Styles --*/
 .agileinfo_social_icons {
     float: right;
-    margin: 1.2em 0em 0 0;
+    margin: 2.2em 0em 0 0;
 }
 .agileits_social_list li{
 	display:inline-block;
@@ -543,7 +549,7 @@ p.quia {
     font-size: 1em;
 }
 .w3_agileits_banner_bottom_grid{
-	background: #ffcc2f;
+	background: #fbe4ae;
     position: relative;
      height: 156px;;
 }
@@ -3340,7 +3346,10 @@ font-size: 1.1em;
 	.navbar-brand {
 		font-size: .7em;
 		margin-left: 0;
-		padding: 23px 0 0 0;
+		padding: 0 0;
+	}
+	.navbar-brand img {
+		width: 150px;
 	}
 	.nav > li {
 		position: relative;
@@ -3597,7 +3606,7 @@ font-size: 1.1em;
 	.navbar-brand {
 		font-size: .7em;
 		margin-left: 0;
-		padding: 19px 0 0 0;
+		padding: 2px 0 0 0;
 	}
 	.agile_banner_info_grid {
 		width: 40%;
@@ -4322,7 +4331,7 @@ font-size: 1.1em;
 	.navbar-brand {
 		font-size: .65em;
 		margin-left: 0;
-		padding: 16px 0 0 0;
+		padding: 0px 0 0 0;
 	}
 	h3.w3l_header {
 		font-size: 1.6em;
