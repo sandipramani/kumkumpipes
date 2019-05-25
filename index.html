@@ -15,6 +15,7 @@
 <link rel="stylesheet" type="text/css" href="css/team.css" /><!--Banner Text-->
 <!-- font-awesome-icons -->
 <link href="css/font-awesome.css" rel="stylesheet"> 
+<link href="css/sl-slider.css" rel="stylesheet"> 
 <!-- //font-awesome-icons -->
 <link href="//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
 </head>
@@ -55,49 +56,56 @@
 		</div>
 	</div>
 <!-- //banner -->
-<!-- banner -->
-	<div class="banner-silder">
-			 <div class="banner">
-					<ul>
-					</ul>
-				  <ol>
-				  </ol>
-				  <i class="left"></i><i class="right"></i>
-				  <div class="banner_wthree_agile_info">
-				     <!--<section class="rw-wrapper">
-						<div class="rw-sentence">
-							<span>The Finest Quality </span>
-							<br />
-							<span>of </span>
-							
-							<div class="rw-words rw-words-1">
-								<span></span>
-								<span>PVC Pipe</span>
-								<span>uPVC Pipe</span>
-							    <span>cPVC Pipe</span>
-								<span>Pipe Fittings</span>
-								
-							</div>
-						</div>
-			         </section>-->
-					 <!-- <div class="wthree_more">
-					   <a href="single.html" data-toggle="modal" data-target="#myModal" class="button--wayra button--border-thick button--text-upper button--size-s">Learn More</a>
-				     </div> -->
-					
-						<!-- <div class="social_list_w3ls">
-							<a href="#" class="w3_agile_facebook_agile"><span class="fa fa-facebook" aria-hidden="true"></span></a>
-							<a href="#" class="agile_twitter_agile"><span class="fa fa-twitter" aria-hidden="true"></span></a>
-							<a href="#" class="w3_agile_dribble_agile"><span class="fa fa-dribbble" aria-hidden="true"></span></a>
-							<a href="#" class="w3_agile_vimeo_agile"><span class="fa fa-vimeo" aria-hidden="true"></span></a>
-						</div> -->
-					
+	<!--Slider-->
+    <section id="slide-show">
+     <div id="slider" class="sl-slider-wrapper">
 
-				  </div>
-		     </div>
-		
-	</div>
-<!-- //banner -->
+        <!--Slider Items-->    
+        <div class="sl-slider">
+            <!--Slider Item1-->
+            <div class="sl-slide item1" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
+                <div class="sl-slide-inner">
+                    <div class="slide1">
+                        <img class="img-responsive" src="images/banner1.jpg" alt="banner1" />
+                    </div>
+                </div>
+            </div>
+            <!--/Slider Item1-->
 
+            <!--Slider Item2-->
+            <div class="sl-slide item2" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
+                <div class="sl-slide-inner">
+                    <div class="slide2">
+                        <img class="img-responsive" src="images/banner2.jpg" alt="banner1" />
+                    </div>
+                </div>
+            </div>
+            <!--Slider Item2-->
+
+            <!--Slider Item3-->
+            <div class="sl-slide item3" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
+                <div class="sl-slide-inner">
+                   <div class="slide3">
+                        <img class="img-responsive" src="images/banner3.jpg" alt="banner1" />
+                </div>
+            </div>
+        </div>
+        <!--Slider Item3-->
+
+    </div>
+    <!--/Slider Items-->
+
+    <!--Slider Next Prev button-->
+    <nav id="nav-arrows" class="nav-arrows">
+        <span class="nav-arrow-prev"><i class="icon-angle-left"></i></span>
+        <span class="nav-arrow-next"><i class="icon-angle-right"></i></span> 
+    </nav>
+    <!--/Slider Next Prev button-->
+
+</div>
+<!-- /slider-wrapper -->           
+</section>
+<!--/Slider-->
 
 <!-- banner-bottom -->
 	<div class="banner-bottom">
@@ -375,129 +383,6 @@ Shree Polymers is a Rajkot (Gujarat, India) based company, which was incorporate
 	</script>
 <!-- //carousal -->
 <!-- //js -->
-<script>
-        $(function(){ 
-
-  // parameters
-  // image height
-  var images_height = '650px';
-  // array of images
-  var images_url = [
-      'images/banner1.jpg',
-      'images/banner2.jpg',
-      'images/banner3.jpg'
-  ];
-  var images_count = images_url.length;
-
-  // create nodes
-  for(var j=0;j<images_count+1;j++){
-      $('.banner ul').append('<li></li>')
-  }
-
-  // pagination
-  for(var j=0;j<images_count;j++){
-      if(j==0){
-          $('.banner ol').append('<li class="current"></li>')
-      }else{
-          $('.banner ol').append('<li></li>')
-      }
-  }
-
-  // convert images into backgrounds
-  $('.banner ul li').css('background-image','url('+images_url[0]+')');
-  
-  $.each(images_url,function(key,value){
-      $('.banner ul li').eq(key).css('background-image','url('+value+')');
-  });
-
-  $('.banner').css('height',images_height);
-
-  $('.banner ul').css('width',(images_count+1)*100+'%');
-
-  $('.banner ol').css('width',images_count*20+'px');
-  $('.banner ol').css('margin-left',-images_count*20*0.5-10+'px');
-
-  var num = 0;
-
-  var window_width = $(window).width();
-
-  $(window).resize(function(){
-      window_width = $(window).width();
-      $('.banner ul li').css({width:window_width});
-      clearInterval(timer);
-      nextPlay();
-      timer = setInterval(nextPlay,5000);
-  });
-
-  $('.banner ul li').width(window_width);
-
-  // pagination dots
-  $('.banner ol li').mouseover(function(){
-      $(this).addClass('current').siblings().removeClass('current');
-      var i = $(this).index();
-      //console.log(i);
-      $('.banner ul').stop().animate({left:-i*window_width},500);
-      num = i;
-  });
-
-  // autoplay
-  var timer = null;
-
-  function prevPlay(){
-      num--;
-      if(num<0){
-          $('.banner ul').css({left:-window_width*images_count}).stop().animate({left:-window_width*(images_count-1)},500);
-          num=images_count-1;
-      }else{
-          $('.banner ul').stop().animate({left:-num*window_width},500);
-      }
-      if(num==images_count-1){
-          $('.banner ol li').eq(images_count-1).addClass('current').siblings().removeClass('current');
-      }else{
-          $('.banner ol li').eq(num).addClass('current').siblings().removeClass('current');
-
-      }
-  }
-
-  function nextPlay(){
-      num++;
-      if(num>images_count){
-          $('.banner ul').css({left:0}).stop().animate({left:-window_width},500);
-          num=1;
-      }else{
-          $('.banner ul').stop().animate({left:-num*window_width},500);
-      }
-      if(num==images_count){
-          $('.banner ol li').eq(0).addClass('current').siblings().removeClass('current');
-      }else{
-          $('.banner ol li').eq(num).addClass('current').siblings().removeClass('current');
-
-      }
-  }
-
-  timer = setInterval(nextPlay,2000);
-
-  // auto pause on mouse enter
-  $('.banner').mouseenter(function(){
-      clearInterval(timer);
-      $('.banner i').fadeIn();
-  }).mouseleave(function(){
-      timer = setInterval(nextPlay,2000);
-      $('.banner i').fadeOut();
-  });
-
-  // goto next
-  $('.banner .right').click(function(){
-      nextPlay();
-  });
-
-  // back to previous
-  $('.banner .left').click(function(){
-      prevPlay();
-  });
-
-});
-    </script>
 
 
 <!-- flexisel -->
@@ -530,6 +415,7 @@ Shree Polymers is a Rajkot (Gujarat, India) based company, which was incorporate
 	</script>
 	<script type="text/javascript" src="js/jquery.flexisel.js"></script>
 <!-- //flexisel -->
+<script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 <!-- odometer-script -->
 			<script src="js/odometer.js"></script>
 			<script>
@@ -599,5 +485,35 @@ Shree Polymers is a Rajkot (Gujarat, India) based company, which was incorporate
 <!-- for bootstrap working -->
 	<script src="js/bootstrap.js"></script>
 <!-- //for bootstrap working -->
+<script src="js/jquery.ba-cond.min.js"></script>
+<script src="js/jquery.slitslider.js"></script>
+<!-- /Required javascript files for Slider -->
+
+<!-- SL Slider -->
+<script type="text/javascript"> 
+$(function() {
+    var Page = (function() {
+        var $navArrows = $( '#nav-arrows' ),
+        slitslider = $( '#slider' ).slitslider( {
+            autoplay : true
+        } ),
+        init = function() {
+            initEvents();
+        },
+        initEvents = function() {
+            $navArrows.children( ':last' ).on( 'click', function() {
+                slitslider.next();
+                return false;
+            });
+            $navArrows.children( ':first' ).on( 'click', function() {
+                slitslider.previous();
+                return false;
+            });
+        };
+        return { init : init };
+    })();
+    Page.init();
+});
+</script>
 </body>
 </html>
