@@ -533,8 +533,8 @@ a.w3_agile_vimeo{
     color: #111;
 }
 p.agile_para {
-      text-align: center;
-    line-height: 2em;
+      text-align: justify;
+    line-height: 1.6em;
     color: #666;
     font-size: 1em;
     margin: 1em 0 4em 0;
@@ -930,7 +930,7 @@ h3.w3l_header.two {
     -ms-background-size: cover;
     background-attachment: fixed;
     min-height: 683px;
-    padding-top: 5em;
+    padding-top: 1em;
 }
 .wthree_head{
 	position: relative;
