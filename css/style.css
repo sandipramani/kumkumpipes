@@ -1462,18 +1462,18 @@ border: 2px solid #ffcc2f;
 /*-- odometer --*/
 .odometer{
 	font-size: 3em;
-    color: #fff;
+    color: #333;
     font-weight: bold;
     margin: 0 auto;
 }
 .countplus{
 	font-size: 2em;
-    color: #fff;
+    color: #333;
     font-weight: bold;
 }
 .w3_stats_grid p{
 	font-size:1em;
-	color:#fff;
+	color:#333;
 	margin:1em 0 0;
 }
 .odometer.odometer-auto-theme, .odometer.odometer-theme-default {
