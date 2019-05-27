@@ -323,7 +323,7 @@
 
 /* Reponive */
 @media screen and (max-width: 1920px){
-    .sl-slider-wrapper{height: 780px;}
+    .sl-slider-wrapper{height: 760px;}
 }
 @media screen and (max-width: 1680px){
     .sl-slider-wrapper{height: 700px;}
