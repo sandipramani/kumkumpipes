@@ -1644,6 +1644,7 @@ border: 2px solid #ffcc2f;
 	font-size:3em;
 	color:#fff;
 	letter-spacing:1px;
+	text-shadow: 1px 1px 5px #333;
 }
 /*-- gallery --*/
 .w3ls_gallery_grids{
