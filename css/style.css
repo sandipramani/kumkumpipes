@@ -258,7 +258,7 @@ a:focus{
 }
 /*-- //banner --*/
 .banner1{
-	background: url(../images/banner1a.jpg) no-repeat 0px 0px;
+	background: url(../images/theme-bg.jpg) no-repeat 0px 0px;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -922,7 +922,7 @@ h3.w3l_header.two {
 /*-- //services-bottom --*/
 /*-- testimonials --*/
 .testimonials {
-       background: url(../images/banner2a.jpg) no-repeat 0px 0px;
+       background: url(../images/theme-bg.jpg) no-repeat 0px 0px;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
